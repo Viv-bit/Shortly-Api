@@ -2,7 +2,7 @@
     <main>
       <Header />
       <Hero />
-      <Form />
+      <TheForm />
       <Statistics />
       <Action />
       <Footer />
@@ -12,7 +12,7 @@
 <script>
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Form from './components/Form'
+import TheForm from './components/TheForm'
 import Statistics from './components/Statistics'
 import Action from './components/Action'
 import Footer from './components/Footer'
@@ -20,7 +20,7 @@ export default {
   components: {
     Header,
     Hero,
-    Form,
+    TheForm,
     Statistics,
     Action,
     Footer
@@ -31,5 +31,6 @@ export default {
 <style>
   * {
     box-sizing: border-box;
+    margin: 0;
   }
 </style>

@@ -29,10 +29,10 @@ export default {
   content: "";
   position: absolute;
   height: 7px;
-  width: 500px;
+  width: 560px;
   background: hsl(180, 66%, 49%);
   z-index: -1;
-  right: -500px;
+  right: -560px;
   top: 50%;
 }
 .statistics-section .statistics-card:nth-child(2) {
@@ -111,7 +111,7 @@ export default {
     width: 7px;
     left: 50%;
     transform: translateX(-50%);
-    top: 262px;
+    top: 255px;
     z-index: -1;
   }
   .statistics-card:first-child::after {
@@ -120,12 +120,22 @@ export default {
 }
 @media screen and (max-width: 416px) {
   .statistics-card:first-child::before {
-    top: 292px;
+    top: 290px;
   }
 }
 @media screen and (max-width: 375px) {
   .statistics-card:first-child::before {
-    top: 322px;
+    top: 255px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .statistics-card:first-child::before {
+    top: 255px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .statistics-card:first-child::before {
+    top: 315px;
   }
 }
 </style>

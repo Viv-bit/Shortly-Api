@@ -3,7 +3,8 @@
     <div class="logo-area">
       <img src="../assets/images/logo.svg" alt="" />
     </div>
-    <div class="footer-area">
+  <div class="footer-area">
+    <div class="footer-item">
       <h4>Features</h4>
       <ul>
         <li>
@@ -17,7 +18,7 @@
         </li>
       </ul>
     </div>
-    <div class="footer-area">
+    <div class="footer-item">
       <h4>Resources</h4>
       <ul>
         <li>
@@ -31,7 +32,7 @@
         </li>
       </ul>
     </div>
-    <div class="footer-area">
+    <div class="footer-item">
       <h4>Company</h4>
       <ul>
         <li>
@@ -48,19 +49,20 @@
         </li>
       </ul>
     </div>
+  </div>
     <div class="social-media-area">
       <ul>
         <li>
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><img src="../assets/images/facebook.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><img src="../assets/images/twitter.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><img src="../assets/images/pinterest.svg" alt=""></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><img src="../assets/images/instagram.svg" alt=""></a>
         </li>
       </ul>
     </div>
@@ -75,40 +77,43 @@ export default {
 
 <style>
 footer {
-  padding: 60px 80px;
   background: hsl(260, 8%, 14%);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.8fr;
   overflow: hidden;
+  padding: 2rem 4rem;
 }
 footer img {
   filter: invert(1);
 }
 footer .logo-area {
-  flex: 1 0 28%;
   margin-bottom: 30px;
 }
-footer .footer-area,
-footer .social-media-area {
-  flex: 1 0 18%;
-  margin-bottom: 20px;
+footer .footer-area
+ {
+  display: flex;
 }
-footer .footer-area h4 {
+footer .footer-item h4 {
   color: #fff;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 18px;
 }
-footer .footer-area ul,
+footer .footer-item {
+  margin: 0 2rem;
+}
+footer .footer-item ul {
+  padding: 0;
+}
+footer .footer-item ul,
 footer .social-media-area ul {
   list-style: none;
 }
-footer .footer-area ul li {
+footer .footer-item ul li {
   display: block;
   margin-bottom: 12px;
 }
-footer .footer-area ul li a,
+footer .footer-item ul li a,
 footer .social-media-area ul li a {
   display: inline-block;
   color: hsl(0, 0%, 75%);
@@ -117,7 +122,10 @@ footer .social-media-area ul li a {
   font-size: 16px;
   transition: all 0.4s ease-in-out;
 }
-footer .footer-area ul li a:hover,
+footer .social-media-area img {
+  filter: invert(1);
+}
+footer .footer-item ul li a:hover,
 footer .social-media-area ul li a:hover {
   color: hsl(180, 66%, 49%);
 }
@@ -138,52 +146,42 @@ footer .social-media-area ul li a {
 }
 @media screen and (max-width: 768px) {
   footer{
-    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
   }
   footer .logo-area {
-    flex: 1 0 100%;
+    justify-self: center;
+    align-self: center;
+    margin: 2rem 0;
+    margin-bottom: 3rem;
   }
-  footer .footer-area{
-    flex: 1 0 33.3%;
-  }
-  footer .social-media-area {
-    flex: 1 0 100%;
-  }
-  footer .social-media-area ul {
-    justify-content: center;
+  footer .footer-item{
+    text-align: center;
+    padding-left: 40px;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 576px) {
-  footer .logo-area {
-    flex: 1 0 100%;
-  }
-  footer .footer-area,
-  footer .social-media-area {
-    flex: 1 0 50%;
-  }
-  footer .social-media-area ul {
-    justify-content: flex-start !important;
-  }
-}
-@media screen and (max-width: 440px) {
   footer {
-    padding: 60px 20px;
-  }
-  footer .logo-area {
-    flex: 1 0 100%;
-  }
-  footer .logo-area img{
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    justify-content: center;
+    align-content: center;
   }
-  footer .footer-area,
-  footer .social-media-area {
-    flex: 1 0 100%;
-    text-align: center;
+  footer .footer-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
-  footer .social-media-area ul{
-    justify-content: center !important;
-    margin: 0 auto;
+  footer .footer-item{
+    padding-left: 0;
   }
 }
+
+
 </style>
