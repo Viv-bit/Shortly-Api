@@ -53,16 +53,24 @@
     <div class="social-media-area">
       <ul>
         <li>
-          <a href="#"><img src="../assets/images/facebook.svg" alt=""></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'facebook-square']" />
+          </a>
         </li>
         <li>
-          <a href="#"><img src="../assets/images/twitter.svg" alt=""></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+          </a>
         </li>
         <li>
-          <a href="#"><img src="../assets/images/pinterest.svg" alt=""></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'pinterest']" />
+          </a>
         </li>
         <li>
-          <a href="#"><img src="../assets/images/instagram.svg" alt=""></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'instagram']" />
+            </a>
         </li>
       </ul>
     </div>
